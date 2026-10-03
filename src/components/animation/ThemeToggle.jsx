@@ -4,33 +4,49 @@ import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme';
 
 /**
- * Feature: Animated Dark/Light Theme Switcher
- * Provides an interactive toggle with rotation and spring physics.
+ * Feature C: Animated Dark/Light Theme Switcher
+ * - Concept: A smooth transition toggle between light and dark themes.
+ * - Implementation Tip: Pure CSS variables + React state persisted in localStorage.
+ * - UX/Animation: Smooth tactile sliding pill switch with rotating sun/moon icons and spring physics.
  */
-export default function ThemeToggle() {
+export default function ThemeToggle({ showLabel = false, className = '' }) {
   const { theme, toggleTheme, isDark } = useTheme();
 
   return (
-    <button
-      className="theme-toggle-btn"
-      onClick={toggleTheme}
-      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-      title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-    >
-      <motion.div
-        key={theme}
-        initial={{ rotate: -90, scale: 0.7, opacity: 0 }}
-        animate={{ rotate: 0, scale: 1, opacity: 1 }}
-        exit={{ rotate: 90, scale: 0.7, opacity: 0 }}
-        transition={{ duration: 0.25 }}
-        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+    <div className={`theme-toggle-wrapper ${className}`}>
+      <button
+        className="theme-switch-pill"
+        onClick={toggleTheme}
+        aria-label={`Toggle Theme. Currently on ${isDark ? 'Dark' : 'Light'} Mode. Click to switch.`}
+        title={`Switch to ${isDark ? 'Light' : 'Dark'} Mode`}
+        type="button"
       >
-        {isDark ? (
-          <Sun size={18} className="theme-icon sun-icon" />
-        ) : (
-          <Moon size={18} className="theme-icon moon-icon" />
-        )}
-      </motion.div>
-    </button>
+        {/* Sliding background thumb with spring physics */}
+        <motion.div
+          className="theme-switch-thumb"
+          layout
+          transition={{ type: 'spring', stiffness: 500, damping: 32 }}
+          style={{
+            left: isDark ? '3px' : 'calc(100% - 31px)',
+          }}
+        />
+
+        {/* Dark Mode Icon (Moon) */}
+        <span className={`theme-switch-icon-wrap ${isDark ? 'active' : ''}`}>
+          <Moon size={15} className="theme-switch-icon moon-icon" />
+        </span>
+
+        {/* Light Mode Icon (Sun) */}
+        <span className={`theme-switch-icon-wrap ${!isDark ? 'active' : ''}`}>
+          <Sun size={15} className="theme-switch-icon sun-icon" />
+        </span>
+      </button>
+
+      {showLabel && (
+        <span className="theme-toggle-label">
+          {isDark ? 'Dark Mode' : 'Light Mode'}
+        </span>
+      )}
+    </div>
   );
 }

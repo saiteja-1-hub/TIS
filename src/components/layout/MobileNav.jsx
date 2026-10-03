@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Sparkles } from 'lucide-react';
+import ThemeToggle from '../animation/ThemeToggle';
 import { tisData } from '../../data/tisData';
 
 export default function MobileNav({ isOpen, onClose, onOpenEnquire }) {
@@ -20,7 +21,13 @@ export default function MobileNav({ isOpen, onClose, onOpenEnquire }) {
           <a href="#testimonials" onClick={onClose}>Parent Testimonials</a>
           <a href="#about" onClick={onClose}>Why TIS</a>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '0.5rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid var(--navy-border)' }}>
+            {/* Theme Switcher in Mobile Drawer */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.25rem 0' }}>
+              <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>Theme Appearance</span>
+              <ThemeToggle showLabel={true} />
+            </div>
+
             <a 
               href={`tel:${tisData.brand.phoneRaw}`}
               className="phone-quick-link"
