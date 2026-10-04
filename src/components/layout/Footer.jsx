@@ -5,9 +5,11 @@ import { tisData } from '../../data/tisData';
 export default function Footer({ onOpenEnquire }) {
   return (
     <footer className="site-footer">
+      <div className="site-footer-bg" aria-hidden="true" />
+      <div className="site-footer-overlay" aria-hidden="true" />
       <div className="container">
         <div className="footer-grid">
-          {/* Col 1: Brand & Contact */}
+
           <div>
             <div className="brand-link" style={{ marginBottom: '1rem' }}>
               <div className="brand-crest">
@@ -39,19 +41,7 @@ export default function Footer({ onOpenEnquire }) {
             </ul>
           </div>
 
-          {/* Col 3: Academic Programs */}
-          <div>
-            <h4 className="footer-col-title">Academics & Life</h4>
-            <ul className="footer-links">
-              <li><a href="#about">Gurukul Pedagogy</a></li>
-              <li><a href="#highlights">6:1 Faculty Mentorship</a></li>
-              <li><a href="#sports">Olympic Coaching</a></li>
-              <li><a href="#highlights">24/7 Infirmary & Hospital Care</a></li>
-              <li><a href="#about">Career Counseling Cell</a></li>
-            </ul>
-          </div>
-
-          {/* Col 4: Campus Location */}
+          {/* Col 3: Campus Location */}
           <div>
             <h4 className="footer-col-title">Campus Address</h4>
             <div className="footer-contact-item">
@@ -62,8 +52,8 @@ export default function Footer({ onOpenEnquire }) {
               <Clock size={18} />
               <span>Office Hours: Mon - Sat: 9:00 AM - 5:30 PM IST</span>
             </div>
-            <button 
-              className="btn-primary" 
+            <button
+              className="btn-primary"
               style={{ width: '100%', marginTop: '1rem', padding: '0.6rem 1rem' }}
               onClick={onOpenEnquire}
             >

@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react';
 
-/**
- * Custom hook to track mouse coordinates smoothly for CustomCursor
- */
+
 export function useMousePosition() {
   const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only activate cursor tracking on non-touch devices
+
     if (window.matchMedia('(pointer: coarse)').matches) {
       return;
     }
@@ -27,7 +25,7 @@ export function useMousePosition() {
       setIsVisible(true);
     };
 
-    // Detect hoverable targets
+
     const handleElementOver = (e) => {
       const target = e.target;
       if (

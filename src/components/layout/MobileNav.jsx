@@ -8,7 +8,7 @@ export default function MobileNav({ isOpen, onClose, onOpenEnquire }) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div 
+        <motion.div
           className="mobile-nav-menu"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -18,17 +18,17 @@ export default function MobileNav({ isOpen, onClose, onOpenEnquire }) {
           <a href="#highlights" onClick={onClose}>Campus Highlights</a>
           <a href="#rankings" onClick={onClose}>Rankings & Accolades</a>
           <a href="#sports" onClick={onClose}>Sports Facilities</a>
+          <a href="#extracurricular" onClick={onClose}>Extracurricular Activities</a>
           <a href="#testimonials" onClick={onClose}>Parent Testimonials</a>
-          <a href="#about" onClick={onClose}>Why TIS</a>
-          
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid var(--navy-border)' }}>
-            {/* Theme Switcher in Mobile Drawer */}
+
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.25rem 0' }}>
               <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>Theme Appearance</span>
               <ThemeToggle showLabel={true} />
             </div>
 
-            <a 
+            <a
               href={`tel:${tisData.brand.phoneRaw}`}
               className="phone-quick-link"
               style={{ width: 'fit-content' }}
@@ -37,8 +37,8 @@ export default function MobileNav({ isOpen, onClose, onOpenEnquire }) {
               <span>{tisData.brand.phone}</span>
             </a>
 
-            <button 
-              className="btn-primary" 
+            <button
+              className="btn-primary"
               style={{ width: '100%' }}
               onClick={() => {
                 onClose();

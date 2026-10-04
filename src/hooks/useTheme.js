@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 
-/**
- * Custom hook to manage Dark / Light theme toggle with localStorage persistence
- */
+
 export function useTheme() {
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('tis-theme');
     if (savedTheme) return savedTheme;
-    return 'dark'; // Default to TIS Dark Navy theme
+    return 'dark';
   });
 
   useEffect(() => {

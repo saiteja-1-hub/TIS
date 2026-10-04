@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Play, ArrowRight, Phone } from 'lucide-react';
+import { X, ArrowRight, Phone } from 'lucide-react';
 import { tisData } from '../../data/tisData';
 
 export default function TourModal({ isOpen, onClose, onOpenEnquire }) {
@@ -8,74 +8,81 @@ export default function TourModal({ isOpen, onClose, onOpenEnquire }) {
     <AnimatePresence>
       {isOpen && (
         <div className="modal-overlay" onClick={onClose}>
-          <motion.div 
-            className="modal-card"
-            style={{ maxWidth: '780px' }}
+          <motion.div
+            className="modal-card tour-modal-card"
+            style={{ maxWidth: '840px', width: '95%' }}
             onClick={(e) => e.stopPropagation()}
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.92 }}
             transition={{ duration: 0.2 }}
           >
-            <button 
-              className="modal-close-btn" 
+            <button
+              className="modal-close-btn"
               onClick={onClose}
               aria-label="Close modal"
             >
               <X size={18} />
             </button>
 
-            <h3 className="modal-title">TIS Dehradun 360° Campus Tour</h3>
+            <h3 className="modal-title">TIS Dehradun Official Campus Tour</h3>
             <p className="modal-subtitle">
-              Explore our 22-acre campus nestled in the tranquil foothills of Chakrata Road, Dehradun.
+              Explore our 22-acre modern Gurukul campus nestled in the serene foothills of Dehradun.
             </p>
 
-            <div style={{
-              position: 'relative',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              background: '#070a12',
-              border: '1px solid rgba(251, 191, 36, 0.25)',
-              padding: '2.5rem 1.5rem',
-              textAlign: 'center'
-            }}>
-              <div style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '72px',
-                height: '72px',
-                borderRadius: '50%',
-                background: 'var(--crimson-primary)',
-                border: '2px solid var(--gold-primary)',
-                boxShadow: '0 0 30px var(--crimson-glow)',
+
+            <div
+              className="tour-video-container"
+              style={{
+                position: 'relative',
+                paddingBottom: '56.25%',
+                height: 0,
+                overflow: 'hidden',
+                borderRadius: '14px',
+                background: '#000000',
+                boxShadow: '0 15px 35px rgba(0, 0, 0, 0.45)',
+                border: '1px solid rgba(251, 191, 36, 0.3)',
                 marginBottom: '1.5rem'
-              }}>
-                <Play size={32} fill="#ffffff" style={{ marginLeft: '4px' }} />
+              }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/zWlXJPTb_Vk?autoplay=1&rel=0"
+                title="Tula's International School | Campus Tour | Dehradun"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 'none'
+                }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>
+                Experience Olympic sports facilities, equestrian arena, robotics labs & residential boarding houses.
               </div>
-              <h4 style={{ fontSize: '1.35rem', marginBottom: '0.5rem', color: '#ffffff' }}>
-                Aerial & Campus Walkthrough Video
-              </h4>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', maxWidth: '480px', margin: '0 auto 1.5rem auto' }}>
-                Tour our Olympic shooting range, equestrian horse riding paddocks, semi-Olympic all-weather swimming pool, modern boarding houses, and smart digital classrooms.
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-                <button 
+              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                <button
                   className="btn-primary"
                   onClick={() => {
                     onClose();
                     onOpenEnquire();
                   }}
                 >
-                  <span>Schedule an In-Person Campus Visit</span>
+                  <span>Schedule Campus Visit</span>
                   <ArrowRight size={16} />
                 </button>
-                <a 
-                  href={`tel:${tisData.brand.phoneRaw}`} 
+                <a
+                  href={`tel:${tisData.brand.phoneRaw}`}
                   className="btn-secondary"
                 >
                   <Phone size={16} />
-                  <span>Call Desk: {tisData.brand.phone}</span>
+                  <span>Call Desk</span>
                 </a>
               </div>
             </div>

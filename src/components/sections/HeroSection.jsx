@@ -6,11 +6,13 @@ import { tisData } from '../../data/tisData';
 export default function HeroSection({ onOpenEnquire, onOpenTour }) {
   return (
     <section id="hero" className="hero-section">
+      <div className="hero-bg" aria-hidden="true" />
+      <div className="hero-overlay" aria-hidden="true" />
       <div className="container">
         <div className="hero-grid">
-          {/* Left Content */}
+
           <div className="hero-content">
-            {/* Admissions Status Badge */}
+
             <Reveal direction="down" delay={0.1}>
               <div className="admissions-badge">
                 <span className="badge-beacon" />
@@ -21,7 +23,7 @@ export default function HeroSection({ onOpenEnquire, onOpenTour }) {
               </div>
             </Reveal>
 
-            {/* Primary Value Proposition Headline */}
+
             <Reveal direction="up" delay={0.2}>
               <h1 className="hero-headline">
                 Where Ancient <span className="text-gold">Gurukul Wisdom</span> Meets Modern Global <span className="text-crimson">Excellence</span>.
@@ -30,16 +32,16 @@ export default function HeroSection({ onOpenEnquire, onOpenTour }) {
 
             <Reveal direction="up" delay={0.3}>
               <p className="hero-description">
-                Nestled in the tranquil Himalayan foothills of Dehradun, TIS fosters holistic scholars, 
-                state athletes, and grounded global leaders through our tailored <strong>6:1 student-teacher ratio</strong> and 
+                Nestled in the tranquil Himalayan foothills of Dehradun, TIS fosters holistic scholars,
+                state athletes, and grounded global leaders through our tailored <strong>6:1 student-teacher ratio</strong> and
                 unrivaled residential mentorship.
               </p>
             </Reveal>
 
-            {/* Direct CTAs */}
+
             <Reveal direction="up" delay={0.4}>
               <div className="hero-cta-group">
-                <button 
+                <button
                   id="hero-apply-btn"
                   className="btn-primary"
                   onClick={onOpenEnquire}
@@ -48,7 +50,7 @@ export default function HeroSection({ onOpenEnquire, onOpenTour }) {
                   <ArrowRight size={18} />
                 </button>
 
-                <button 
+                <button
                   id="hero-tour-btn"
                   className="btn-secondary"
                   onClick={onOpenTour}
@@ -59,7 +61,7 @@ export default function HeroSection({ onOpenEnquire, onOpenTour }) {
               </div>
             </Reveal>
 
-            {/* Quick Trust Highlights Banner */}
+
             <Reveal direction="up" delay={0.5}>
               <div className="hero-trust-row">
                 <div className="trust-item">
@@ -78,7 +80,7 @@ export default function HeroSection({ onOpenEnquire, onOpenTour }) {
             </Reveal>
           </div>
 
-          {/* Right Interactive Visual Card */}
+
           <Reveal direction="left" delay={0.35}>
             <div className="hero-visual-card">
               <div className="visual-top-badge">
@@ -86,20 +88,25 @@ export default function HeroSection({ onOpenEnquire, onOpenTour }) {
                 <span>Immersive Campus Tour</span>
               </div>
 
-              <div 
-                className="visual-preview-box interactive-target" 
-                onClick={onOpenTour} 
-                role="button" 
+              <div
+                className="visual-preview-box interactive-target"
+                onClick={onOpenTour}
+                role="button"
                 tabIndex={0}
-                aria-label="Open 360 Campus Tour"
+                aria-label="Play Immersive Campus Tour Video"
+                style={{
+                  backgroundImage: `url('https://img.youtube.com/vi/zWlXJPTb_Vk/maxresdefault.jpg')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
               >
                 <div className="visual-art-overlay" />
-                <div className="visual-play-pill" title="Click to view campus tour">
+                <div className="visual-play-pill" title="Click to watch campus tour video">
                   <Play size={24} fill="#ffffff" style={{ marginLeft: '3px' }} />
                 </div>
                 <div className="visual-preview-content">
-                  <div className="visual-preview-title">Tula's 22-Acre Campus Experience</div>
-                  <div className="visual-preview-sub">Dehradun, Uttarakhand • Virtual 360 Walkthrough</div>
+                  <div className="visual-preview-title">Tula's 22-Acre Campus Tour</div>
+                  <div className="visual-preview-sub">Dehradun • Watch Official Video Tour</div>
                 </div>
               </div>
 

@@ -3,12 +3,7 @@ import { motion } from 'framer-motion';
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme';
 
-/**
- * Feature C: Animated Dark/Light Theme Switcher
- * - Concept: A smooth transition toggle between light and dark themes.
- * - Implementation Tip: Pure CSS variables + React state persisted in localStorage.
- * - UX/Animation: Smooth tactile sliding pill switch with rotating sun/moon icons and spring physics.
- */
+
 export default function ThemeToggle({ showLabel = false, className = '' }) {
   const { theme, toggleTheme, isDark } = useTheme();
 
@@ -21,7 +16,7 @@ export default function ThemeToggle({ showLabel = false, className = '' }) {
         title={`Switch to ${isDark ? 'Light' : 'Dark'} Mode`}
         type="button"
       >
-        {/* Sliding background thumb with spring physics */}
+
         <motion.div
           className="theme-switch-thumb"
           layout
@@ -31,12 +26,12 @@ export default function ThemeToggle({ showLabel = false, className = '' }) {
           }}
         />
 
-        {/* Dark Mode Icon (Moon) */}
+
         <span className={`theme-switch-icon-wrap ${isDark ? 'active' : ''}`}>
           <Moon size={15} className="theme-switch-icon moon-icon" />
         </span>
 
-        {/* Light Mode Icon (Sun) */}
+
         <span className={`theme-switch-icon-wrap ${!isDark ? 'active' : ''}`}>
           <Sun size={15} className="theme-switch-icon sun-icon" />
         </span>

@@ -34,7 +34,7 @@ export default function EnquireModal({ isOpen, onClose }) {
     <AnimatePresence>
       {isOpen && (
         <div className="modal-overlay" onClick={handleClose}>
-          <motion.div 
+          <motion.div
             className="modal-card"
             onClick={(e) => e.stopPropagation()}
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -42,8 +42,8 @@ export default function EnquireModal({ isOpen, onClose }) {
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.22 }}
           >
-            <button 
-              className="modal-close-btn" 
+            <button
+              className="modal-close-btn"
               onClick={handleClose}
               aria-label="Close modal"
             >
@@ -60,9 +60,9 @@ export default function EnquireModal({ isOpen, onClose }) {
                 <form onSubmit={handleFormSubmit}>
                   <div className="form-group">
                     <label className="form-label">Parent / Guardian Name *</label>
-                    <input 
-                      type="text" 
-                      required 
+                    <input
+                      type="text"
+                      required
                       placeholder="e.g. Dr. Rajesh Sharma"
                       className="form-input"
                       value={formData.parentName}
@@ -73,9 +73,9 @@ export default function EnquireModal({ isOpen, onClose }) {
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                     <div className="form-group">
                       <label className="form-label">Phone Number *</label>
-                      <input 
-                        type="tel" 
-                        required 
+                      <input
+                        type="tel"
+                        required
                         placeholder="e.g. +91 98765 43210"
                         className="form-input"
                         value={formData.phone}
@@ -85,7 +85,7 @@ export default function EnquireModal({ isOpen, onClose }) {
 
                     <div className="form-group">
                       <label className="form-label">Grade Applying For *</label>
-                      <select 
+                      <select
                         className="form-select"
                         value={formData.childGrade}
                         onChange={(e) => setFormData({ ...formData, childGrade: e.target.value })}
@@ -106,9 +106,9 @@ export default function EnquireModal({ isOpen, onClose }) {
 
                   <div className="form-group">
                     <label className="form-label">Email Address *</label>
-                    <input 
-                      type="email" 
-                      required 
+                    <input
+                      type="email"
+                      required
                       placeholder="parent@example.com"
                       className="form-input"
                       value={formData.email}
@@ -118,8 +118,8 @@ export default function EnquireModal({ isOpen, onClose }) {
 
                   <div className="form-group">
                     <label className="form-label">Current City</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="e.g. New Delhi / Dehradun / Dubai"
                       className="form-input"
                       value={formData.city}
@@ -127,9 +127,9 @@ export default function EnquireModal({ isOpen, onClose }) {
                     />
                   </div>
 
-                  <button 
-                    type="submit" 
-                    className="btn-primary" 
+                  <button
+                    type="submit"
+                    className="btn-primary"
                     style={{ width: '100%', marginTop: '0.75rem', padding: '0.85rem' }}
                   >
                     <span>Submit Admission Enquiry</span>

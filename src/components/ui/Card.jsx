@@ -1,8 +1,6 @@
 import React from 'react';
 
-/**
- * Reusable Card UI Component
- */
+
 export default function Card({
   children,
   className = '',

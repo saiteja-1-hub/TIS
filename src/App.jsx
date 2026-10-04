@@ -14,7 +14,7 @@ import HeroSection from './components/sections/HeroSection';
 import HighlightsSection from './components/sections/HighlightsSection';
 import RankingsSection from './components/sections/RankingsSection';
 import SportsSection from './components/sections/SportsSection';
-import AboutSection from './components/sections/AboutSection';
+import ExtracurricularSection from './components/sections/ExtracurricularSection';
 import TestimonialsSection from './components/sections/TestimonialsSection';
 import CTASection from './components/sections/CTASection';
 
@@ -73,8 +73,8 @@ export default function App() {
         {/* 4. Sports Facilities Showcase (16+ Sports) */}
         <SportsSection />
 
-        {/* 5. Why TIS / Gurukul Pillars */}
-        <AboutSection />
+        {/* 4b. Extracurricular Activities Showcase */}
+        <ExtracurricularSection />
 
         {/* 6. Parent Reviews & Testimonials */}
         <TestimonialsSection />

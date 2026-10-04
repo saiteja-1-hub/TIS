@@ -1,9 +1,6 @@
 import React from 'react';
 
-/**
- * Reusable Button UI Component
- * Variants: 'primary' | 'secondary' | 'gold' | 'ghost'
- */
+
 export default function Button({
   children,
   variant = 'primary',

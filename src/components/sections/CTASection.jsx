@@ -9,6 +9,7 @@ export default function CTASection({ onOpenEnquire }) {
       <div className="container">
         <Reveal direction="up">
           <div className="cta-banner-box">
+            <div className="cta-banner-bg" aria-hidden="true" />
             <div className="cta-banner-inner">
               <div>
                 <h2 className="cta-banner-title">
@@ -17,12 +18,12 @@ export default function CTASection({ onOpenEnquire }) {
                 <p className="cta-banner-desc">
                   Limited seats available for Academic Session 2025-26. Schedule a campus visit or begin your admission application online today.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  <div className="trust-item" style={{ color: '#fef08a' }}>
+                <div className="cta-trust-items-row">
+                  <div className="trust-item cta-trust-item">
                     <Check size={18} />
                     <span>Direct Interaction with Housemasters</span>
                   </div>
-                  <div className="trust-item" style={{ color: '#fef08a' }}>
+                  <div className="trust-item cta-trust-item">
                     <Check size={18} />
                     <span>Merit Scholarship Assessments</span>
                   </div>
@@ -30,7 +31,7 @@ export default function CTASection({ onOpenEnquire }) {
               </div>
 
               <div className="cta-banner-actions">
-                <button 
+                <button
                   id="banner-enquire-cta"
                   className="btn-gold"
                   onClick={onOpenEnquire}
@@ -39,8 +40,8 @@ export default function CTASection({ onOpenEnquire }) {
                   <ChevronRight size={18} />
                 </button>
 
-                <a 
-                  href={`tel:${tisData.brand.phoneRaw}`} 
+                <a
+                  href={`tel:${tisData.brand.phoneRaw}`}
                   className="cta-direct-phone"
                 >
                   <Phone size={18} />

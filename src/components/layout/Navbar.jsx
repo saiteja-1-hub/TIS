@@ -18,7 +18,7 @@ export default function Navbar({ onOpenEnquire, mobileMenuOpen, setMobileMenuOpe
     <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="nav-inner">
-          {/* Brand Logo & Crest */}
+
           <a href="#hero" className="brand-link" aria-label="Tula's International School Homepage">
             <div className="brand-crest">
               <span>TIS</span>
@@ -34,8 +34,8 @@ export default function Navbar({ onOpenEnquire, mobileMenuOpen, setMobileMenuOpe
             <a href="#highlights">Campus Stats</a>
             <a href="#rankings">Rankings & Awards</a>
             <a href="#sports">16+ Sports</a>
+            <a href="#extracurricular">Activities</a>
             <a href="#testimonials">Parent Reviews</a>
-            <a href="#about">Why TIS</a>
           </nav>
 
           {/* Header Actions (Theme Toggle, Phone Link, Enquire CTA, Mobile Hamburger) */}
@@ -44,8 +44,8 @@ export default function Navbar({ onOpenEnquire, mobileMenuOpen, setMobileMenuOpe
             <ThemeToggle />
 
             {/* Quick Phone Contact */}
-            <a 
-              href={`tel:${tisData.brand.phoneRaw}`} 
+            <a
+              href={`tel:${tisData.brand.phoneRaw}`}
               className="phone-quick-link"
               title="Call Admissions Office"
             >
@@ -55,7 +55,7 @@ export default function Navbar({ onOpenEnquire, mobileMenuOpen, setMobileMenuOpe
             </a>
 
             {/* Enquire Now Call to Action Button */}
-            <button 
+            <button
               id="header-enquire-btn"
               className="btn-primary"
               onClick={onOpenEnquire}
@@ -65,7 +65,7 @@ export default function Navbar({ onOpenEnquire, mobileMenuOpen, setMobileMenuOpe
             </button>
 
             {/* Mobile Hamburger Toggle */}
-            <button 
+            <button
               className="mobile-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation Menu"

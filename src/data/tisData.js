@@ -18,15 +18,8 @@ export const tisData = {
       unit: "Acres",
       label: "Lush Himalayan Campus",
       description: "Pollution-free serene campus in the tranquil Doon Valley designed for focused holistic learning.",
-      icon: "Trees"
-    },
-    {
-      id: "sports-count",
-      number: "16+",
-      unit: "Olympic Sports",
-      label: "World-Class Sports Facilities",
-      description: "From equestrian horse riding and shooting to semi-Olympic swimming with certified coaches.",
-      icon: "Trophy"
+      icon: "Trees",
+      image: "https://www.schoolsofdehradun.com/wp-content/uploads/2023/10/Tulas-International-School.jpg"
     },
     {
       id: "medical-care",
@@ -34,15 +27,26 @@ export const tisData = {
       unit: "Medical Care",
       label: "Health & Resident Infirmary",
       description: "Round-the-clock doctors, nurses, dedicated ambulance, and tie-up with premier superspeciality hospitals.",
-      icon: "HeartPulse"
+      icon: "HeartPulse",
+      image: "https://tis.edu.in/_next/static/media/image3.b8273b93.png"
     },
     {
       id: "ratio",
       number: "6:1",
       unit: "Ratio",
       label: "Student-to-Teacher Ratio",
-      description: "Hyper-personalized mentorship, tailored academic attention, and attentive pastoral pastoral boarding care.",
-      icon: "Users"
+      description: "Hyper-personalized mentorship, tailored academic attention, and attentive pastoral boarding care.",
+      icon: "Users",
+      image: "https://tis.edu.in/_next/static/media/image1.a3011dda.png"
+    },
+    {
+      id: "sports-count",
+      number: "16+",
+      unit: "Olympic Sports",
+      label: "World-Class Sports Facilities",
+      description: "From equestrian horse riding and shooting to semi-Olympic swimming with certified coaches.",
+      icon: "Trophy",
+      image: "https://tis.edu.in/_next/static/media/image2.5d908b38.webp"
     }
   ],
 
@@ -54,7 +58,8 @@ export const tisData = {
       location: "Dehradun",
       source: "EducationWorld India School Rankings",
       year: "2024 - 2025",
-      badge: "Top Ranked in Uttarakhand"
+      badge: "Top Ranked in Uttarakhand",
+      image: "https://tis.edu.in/_next/static/media/UTTARAKHAND.652376d5.jpg"
     },
     {
       id: 2,
@@ -63,124 +68,95 @@ export const tisData = {
       location: "North India",
       source: "Outlook I-CARE Rankings",
       year: "2024",
-      badge: "Excellence in Boarding Life"
+      badge: "Best Residential School",
+      image: "https://tis.edu.in/_next/static/media/BestResidential.5173db8d.jpg"
     },
     {
       id: 3,
-      rank: "Top 5",
-      category: "Holistic Education & Sports Infrastructure",
-      location: "India",
-      source: "Education Today Survey",
+      rank: "Top",
+      category: "International School Award",
+      location: "National Recognition",
+      source: "Elite International School League",
       year: "2024",
-      badge: "Infrastructure Leader"
+      badge: "Global Pedagogy",
+      image: "https://tis.edu.in/_next/static/media/internationalSchool.3172c252.png"
     },
     {
       id: 4,
       rank: "#1",
-      category: "Modern Gurukul & Value-Based Learning",
-      location: "National Award",
-      source: "BW Education & Elite School League",
+      category: "The Top Boarding School",
+      location: "India Excellence Awards",
+      source: "BW Education & Education Today Survey",
       year: "2024",
-      badge: "Legacy of Values"
+      badge: "Legacy of Values",
+      image: "https://tis.edu.in/_next/static/media/TheTop.1c2643f0.jpg"
     }
   ],
 
   sports: [
     {
+      id: "horseRiding",
       name: "Horse Riding",
+      image: "https://tis.edu.in/_next/static/media/horseRiding.8f259127.png",
       category: "Equestrian",
-      description: "Dedicated equestrian arena with thoroughbred horses and certified national-level trainers.",
-      badge: "Elite Facility"
+      badge: "Elite Arena",
+      description: "Dedicated equestrian arena with thoroughbred horses and certified national-level trainers."
     },
     {
-      name: "10m Shooting Range",
-      category: "Precision Sports",
-      description: "Olympic-standard indoor 10m air rifle & pistol range with computerized target systems.",
-      badge: "Olympic Spec"
-    },
-    {
-      name: "Semi-Olympic Swimming",
-      category: "Aquatics",
-      description: "All-weather, temperature-monitored 25m semi-Olympic pool with certified lifeguards.",
-      badge: "All-Weather"
-    },
-    {
-      name: "Archery Arena",
-      category: "Target Sports",
-      description: "FITA regulation target lines offering recurve & compound bow training for national circuits.",
-      badge: "Pro Range"
-    },
-    {
-      name: "Lawn Tennis",
-      category: "Racquet Sports",
-      description: "Synthetic floodlit decoturf courts built to ITF specifications for day & night matches.",
-      badge: "Floodlit"
-    },
-    {
-      name: "Football Stadium",
-      category: "Field Sports",
-      description: "Full-sized natural lush green turf ground with professional goal nets and tactical training.",
-      badge: "Full Regulation"
-    },
-    {
-      name: "Cricket Oval & Nets",
-      category: "Pitch Sports",
-      description: "Match pitch, bowling machines, and 4 dedicated practice turf nets for year-round mastery.",
-      badge: "Bowling Machines"
-    },
-    {
-      name: "Squash Courts",
+      id: "badminton",
+      name: "Badminton",
+      image: "https://tis.edu.in/_next/static/media/badminton.a314ff00.png",
       category: "Indoor Racquet",
-      description: "WSF certified glass-backed squash courts with maple wood shock-absorption flooring.",
-      badge: "Indoor Wood"
+      badge: "4-Court Pavilion",
+      description: "Indoor wooden badminton pavilion with BWF-standard tournament lighting and shock-absorption flooring."
     },
     {
-      name: "Badminton Academy",
-      category: "Indoor Racquet",
-      description: "4-court indoor wooden badminton pavilion with BWF tournament lighting.",
-      badge: "4-Court Pavilion"
-    },
-    {
-      name: "Basketball Courts",
-      category: "Court Sports",
-      description: "Dual acrylic FIBA standard synthetic basketball courts with perimeter floodlights.",
-      badge: "FIBA Standard"
-    },
-    {
-      name: "Taekwondo & Martial Arts",
-      category: "Combat Sports",
-      description: "Dedicated Dojang hall under black-belt masters focusing on discipline and self-defence.",
-      badge: "Martial Arts"
-    },
-    {
-      name: "Table Tennis Complex",
-      category: "Indoor Sports",
-      description: "Multi-table competition arena with Stag Americas tournament tables.",
-      badge: "Indoor Arena"
-    },
-    {
-      name: "Skating Rink",
-      category: "Action Sports",
-      description: "Smooth banked concrete roller skating oval with full perimeter protective safety barriers.",
-      badge: "Track Oval"
-    },
-    {
-      name: "Gymnastics & Yoga",
-      category: "Wellness & Agility",
-      description: "Spacious sun-lit hall for daily meditation, yogic kriyas, and gymnastics agility drills.",
-      badge: "Mind & Body"
-    },
-    {
-      name: "Volleyball Court",
+      id: "volleyball",
+      name: "Volleyball",
+      image: "https://tis.edu.in/_next/static/media/volleyball.045be884.png",
       category: "Team Sports",
-      description: "Regulation outdoor volleyball arena with sand and cushioned hard court layouts.",
-      badge: "Team Court"
+      badge: "Pro Arena",
+      description: "Regulation outdoor volleyball arena featuring international sand and cushioned synthetic court layouts."
     },
     {
-      name: "Billiards & Snooker",
-      category: "Club Sports",
-      description: "English slate tournament snooker tables in the student recreation club house.",
-      badge: "Club House"
+      id: "Cricket",
+      name: "Cricket",
+      image: "https://tis.edu.in/_next/static/media/Cricket.b06b18ca.png",
+      category: "Pitch Sports",
+      badge: "Turf Nets & Oval",
+      description: "Match pitch, automated bowling machines, and 4 dedicated practice turf nets for year-round mastery."
+    },
+    {
+      id: "archery",
+      name: "Archery",
+      image: "https://tis.edu.in/_next/static/media/archery.7a805345.png",
+      category: "Precision Sports",
+      badge: "FITA Regulation",
+      description: "FITA regulation target lines offering recurve & compound bow training for national competitive circuits."
+    },
+    {
+      id: "swimming",
+      name: "Swimming",
+      image: "https://tis.edu.in/_next/static/media/swimming.d4285534.png",
+      category: "Aquatics",
+      badge: "Semi-Olympic",
+      description: "All-weather, temperature-monitored 25m semi-Olympic pool supervised by certified NIS aquatic coaches."
+    },
+    {
+      id: "shooting",
+      name: "Shooting",
+      image: "https://tis.edu.in/_next/static/media/shooting.b0b11d74.png",
+      category: "Precision Sports",
+      badge: "10m Olympic Range",
+      description: "Olympic-standard indoor 10m air rifle & pistol range equipped with computerized target precision systems."
+    },
+    {
+      id: "basketball",
+      name: "Basketball",
+      image: "https://tis.edu.in/_next/static/media/basketball.fa70909d.png",
+      category: "Court Sports",
+      badge: "FIBA Standard",
+      description: "Dual acrylic FIBA standard synthetic basketball courts equipped with perimeter floodlights for day & night play."
     }
   ],
 
@@ -239,6 +215,59 @@ export const tisData = {
     {
       title: "Global University Guidance",
       desc: "Dedicated career counseling cell with a track record of placements in Ivy League, UK, and premier Indian universities."
+    }
+  ],
+
+  extracurricular: [
+    {
+      id: "arts",
+      name: "One-Line Art",
+      category: "Arts",
+      image: "https://tis.edu.in/_next/static/media/dance.88843edb.webp",
+      description: "One-line art is a minimalist drawing style created using a single, unbroken, continuous line without lifting the drawing tool from the surface.",
+      badge: "Art Studio"
+    },
+    {
+      id: "pottery",
+      name: "Pottery & Ceramic Sculpture",
+      category: "Visual & Tactile Arts",
+      image: "https://tis.edu.in/_next/static/media/pot.6f7c2ee3.webp",
+      description: "Hands-on ceramic wheels and sculpting studio fostering tactile creativity, patience, three-dimensional design, and mindfulness.",
+      badge: "Artisan Studio"
+    },
+    {
+      id: "shooting",
+      name: "Short Range",
+      category: "Short Range",
+      image: "https://tis.edu.in/_next/static/media/Image%201.0a814859.webp",
+      description: "A shooting sports range is a specialized indoor or outdoor facility equipped with safety barriers, firing lines, and targets designed for practicing and competing in marksmanship.",
+      badge: "Firing Range"
+    },
+    {
+      id: "science",
+      name: "Science Experiments",
+      category: "Science & Innovation",
+      image: "https://tis.edu.in/_next/static/media/swimming.6fc81e65.webp",
+      description: "An experiment is a controlled test or procedure used to discover an effect, find out how one variable affects another.",
+      badge: "Discovery Lab"
+    },
+    {
+      id: "cricket",
+      name: "Cricket",
+      category: "Pitch Sports",
+      image: "https://tis.edu.in/_next/static/media/Image%203.21dc9e69.webp",
+      imagePosition: "center 12%",
+      imageClass: "activity-image-cricket",
+      description: "Cricket is a bat-and-ball team sport played between two sides of eleven players on an oval field with a central 22-yard pitch, where teams take turns batting and fielding to score the most runs.",
+      badge: "Cricket Oval"
+    },
+    {
+      id: "karate",
+      name: "Karate & Self-Defence",
+      category: "Martial Arts & Discipline",
+      image: "https://tis.edu.in/_next/static/media/karate.4020fba5.webp",
+      description: "Dedicated martial arts Dojang training under black-belt masters instilling mental fortitude, physical agility, and self-defence.",
+      badge: "Black Belt Dojo"
     }
   ]
 };

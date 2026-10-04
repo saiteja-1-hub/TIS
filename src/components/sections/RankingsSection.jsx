@@ -1,5 +1,4 @@
 import React from 'react';
-import { Award } from 'lucide-react';
 import Reveal from '../animation/Reveal';
 import { tisData } from '../../data/tisData';
 
@@ -9,12 +8,12 @@ export default function RankingsSection() {
       <div className="container">
         <Reveal direction="up">
           <div className="section-header">
-            <span className="section-tag crimson">Accredited Excellence</span>
+            <span className="section-tag crimson">Awards</span>
             <h2 className="section-title">
               National <span className="gold-highlight">Rankings & Awards</span>
             </h2>
             <p className="section-subtitle">
-              Consistently recognized as one of India's leading residential institutions by premier educational surveys and statutory bodies.
+              We believe in celebrating the hard work and perseverance of the best!
             </p>
           </div>
         </Reveal>
@@ -24,10 +23,17 @@ export default function RankingsSection() {
             <Reveal key={award.id} direction={idx % 2 === 0 ? 'right' : 'left'} delay={0.12 * idx}>
               <div className="ranking-card">
                 <span className="ranking-badge-pill">{award.badge}</span>
-                
-                <div className="ranking-trophy-col">
-                  <Award size={30} className="trophy-icon" />
-                  <span className="rank-number">{award.rank}</span>
+
+
+                <div className="ranking-award-img-wrap">
+                  <img
+                    src={award.image}
+                    alt={`${award.category} Award`}
+                    className="ranking-award-img"
+                    loading="lazy"
+                  />
+                  <div className="ranking-award-overlay" />
+                  <span className="ranking-rank-pill">{award.rank}</span>
                 </div>
 
                 <div className="ranking-info">

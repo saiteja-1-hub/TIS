@@ -1,9 +1,6 @@
 import React from 'react';
 
-/**
- * Reusable Badge UI Component
- * Variants: 'gold' | 'crimson' | 'pill'
- */
+
 export default function Badge({
   children,
   variant = 'gold',

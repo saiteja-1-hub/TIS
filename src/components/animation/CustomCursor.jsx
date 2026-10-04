@@ -1,30 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
-/**
- * Feature A: Custom Cursor
- * - Concept: Circular ring and inner dot smoothly following the mouse.
- * - UX Rule: Hidden on touch/mobile devices (pointer: coarse). Scales & morphs on interactive elements (<a>, <button>, inputs).
- * - Implementation: Pure Framer Motion useMotionValue + useSpring for true 60 FPS with zero layout thrashing.
- */
+
 export default function CustomCursor() {
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Raw motion values for real-time cursor coordinates without React re-render lag
+
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
 
-  // Smooth springs for outer ring to prevent jitter and maintain 60 FPS
+
   const ringX = useSpring(mouseX, { stiffness: 450, damping: 28, restDelta: 0.001 });
   const ringY = useSpring(mouseY, { stiffness: 450, damping: 28, restDelta: 0.001 });
 
-  // Tighter springs for inner focal dot
+
   const dotX = useSpring(mouseX, { stiffness: 1000, damping: 35, restDelta: 0.001 });
   const dotY = useSpring(mouseY, { stiffness: 1000, damping: 35, restDelta: 0.001 });
 
   useEffect(() => {
-    // UX Rule: Hide cursor on touch/mobile devices
+
     if (window.matchMedia('(pointer: coarse)').matches) {
       return;
     }
@@ -43,7 +38,7 @@ export default function CustomCursor() {
       setIsVisible(true);
     };
 
-    // Detect hoverable targets: <a>, <button>, inputs, selects, and interactive cards
+
     const handleElementOver = (e) => {
       const target = e.target;
       if (
@@ -81,7 +76,7 @@ export default function CustomCursor() {
 
   return (
     <div className="custom-cursor-container" aria-hidden="true">
-      {/* Outer Follower Ring */}
+
       <motion.div
         className="custom-cursor-ring"
         style={{
@@ -98,7 +93,7 @@ export default function CustomCursor() {
         transition={{ duration: 0.15, ease: 'easeOut' }}
       />
 
-      {/* Inner Precision Dot */}
+
       <motion.div
         className="custom-cursor-dot"
         style={{

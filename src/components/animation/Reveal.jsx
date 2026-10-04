@@ -1,11 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-/**
- * Feature: Scroll-Triggered Reveals
- * Wraps section cards, stats, and text blocks using Framer Motion's whileInView.
- * Uses viewport={{ once: true }} to animate elements into view without causing re-triggering lag during reverse scrolling.
- */
+
 export default function Reveal({
   children,
   className = '',

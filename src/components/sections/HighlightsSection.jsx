@@ -3,17 +3,14 @@ import { Trees, Trophy, HeartPulse, Users } from 'lucide-react';
 import Reveal from '../animation/Reveal';
 import { tisData } from '../../data/tisData';
 
-export default function HighlightsSection() {
-  const getIcon = (iconName) => {
-    switch (iconName) {
-      case 'Trees': return <Trees size={26} />;
-      case 'Trophy': return <Trophy size={26} />;
-      case 'HeartPulse': return <HeartPulse size={26} />;
-      case 'Users': return <Users size={26} />;
-      default: return <Trophy size={26} />;
-    }
-  };
+const iconMap = {
+  Trees,
+  Trophy,
+  HeartPulse,
+  Users,
+};
 
+export default function HighlightsSection() {
   return (
     <section id="highlights" className="section-highlights">
       <div className="container">
@@ -30,23 +27,41 @@ export default function HighlightsSection() {
         </Reveal>
 
         <div className="stats-grid">
-          {tisData.stats.map((stat, idx) => (
-            <Reveal key={stat.id} direction="up" delay={0.12 * idx}>
-              <div className="stat-card">
-                <div className="stat-icon-wrapper">
-                  {getIcon(stat.icon)}
-                </div>
+          {tisData.stats.map((stat, idx) => {
+            const IconComponent = iconMap[stat.icon] || Trophy;
+            return (
+              <Reveal key={stat.id} direction="up" delay={0.12 * idx}>
+                <div className="stat-card stat-card-visual">
 
-                <div className="stat-number-wrap">
-                  <span className="stat-number">{stat.number}</span>
-                  <span className="stat-unit">{stat.unit}</span>
-                </div>
+                  <div className="stat-card-img-wrap">
+                    <img
+                      src={stat.image}
+                      alt={stat.label}
+                      className="stat-card-img"
+                      loading="lazy"
+                    />
+                    <div className="stat-card-img-overlay" />
 
-                <h3 className="stat-label">{stat.label}</h3>
-                <p className="stat-description">{stat.description}</p>
-              </div>
-            </Reveal>
-          ))}
+                    <div className="stat-card-metric-badge">
+                      <span className="stat-number">{stat.number}</span>
+                      <span className="stat-unit">{stat.unit}</span>
+                    </div>
+                  </div>
+
+
+                  <div className="stat-card-body">
+                    <div className="stat-card-icon-row">
+                      <div className="stat-icon-wrapper">
+                        <IconComponent size={22} />
+                      </div>
+                    </div>
+                    <h3 className="stat-label">{stat.label}</h3>
+                    <p className="stat-description">{stat.description}</p>
+                  </div>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
